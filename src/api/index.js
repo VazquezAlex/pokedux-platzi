@@ -9,3 +9,12 @@ export const getPokemons = async () => {
         console.error(e);
     }
 }
+
+export const getPokemonDetails = async (pokemon) => {
+    try {
+        const { data } = await axios.get(pokemon.url);
+        return data
+    } catch(e) {
+        console.error(e);
+    }
+}
